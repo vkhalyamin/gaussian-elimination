@@ -6,6 +6,6 @@
 
 #include "io.h"
 
-void gauss(double** matrix, int* rang);
+void gauss(double** matrix, int* rank);
 
 #endif

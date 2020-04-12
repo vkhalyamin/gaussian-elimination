@@ -27,23 +27,23 @@ int main()
 void calculate()
 {
 	double** matrix;
-	int i, rang;
+	int i, rank;
 
-	while(!scan_rang(&rang)) {
+	while(!scan_rank(&rank)) {
 		printf("\nToo many equastinos! Please enter again.\n\n");
 	}
 
 	/* memory allocation for matrix */
-	matrix = (double**)malloc(sizeof(double*)*(rang+1));
-	for (i = 0; i < rang; i++) {
-		matrix[i] = (double*)malloc(sizeof(double)*rang);
+	matrix = (double**)malloc(sizeof(double*)*(rank+1));
+	for (i = 0; i < rank; i++) {
+		matrix[i] = (double*)malloc(sizeof(double)*rank);
 	}
 
-	scan_matrix(matrix, &rang);
-	print_matrix(matrix, &rang);
-	gauss(matrix, &rang);
+	scan_matrix(matrix, &rank);
+	print_matrix(matrix, &rank);
+	gauss(matrix, &rank);
 
-	for (i = 0; i < rang; i++)
+	for (i = 0; i < rank; i++)
 		free(matrix[i]);
 	free(matrix);
 	return;
