@@ -1,6 +1,6 @@
 #include "gauss.h"
 
-void main_element(double **matrix, int *rank, int k, int *order)
+void main_element(double **matrix, const int *rank, const int k, int *order)
 {
 	int i, j, i_max = k, j_max = k;
 	double temp;
@@ -31,7 +31,7 @@ void main_element(double **matrix, int *rank, int k, int *order)
 	print_matrix(matrix, rank);
 }
 
-void gauss(double **matrix, int *rank)
+void gauss(double **matrix, const int *rank)
 {
 	double roots[*rank];
 	int order[*rank];

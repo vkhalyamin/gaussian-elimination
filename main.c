@@ -27,7 +27,7 @@ void calculate()
 	int i, rank;
 
 	while(!scan_rank(&rank)) {
-		printf("\nToo many equastinos! Please enter again.\n\n");
+		printf("\nIncorrect equestions number! Please enter again.\n\n");
 	}
 
 	/* memory allocation for matrix */

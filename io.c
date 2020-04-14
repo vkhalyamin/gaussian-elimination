@@ -4,10 +4,10 @@ int scan_rank(int *rank)
 {
 	printf("Number of equstions:"); 
 	scanf("%d", rank); 
-	return *rank <= MAX_RANK;
+	return *rank <= MAX_RANK && *rank;
 }
 
-void scan_matrix(double **matrix, int *rank) 
+void scan_matrix(double **matrix, const int *rank) 
 {
 	int i, j;
 	printf("Enter the coefficients:\n");
@@ -19,7 +19,7 @@ void scan_matrix(double **matrix, int *rank)
 	} 
 }
 
-void print_matrix(double **matrix, int *rank)
+void print_matrix(double **matrix, const int *rank)
 {
 	int i, j;
 	for(i = 0; i < *rank; i++) {
