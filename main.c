@@ -4,23 +4,20 @@
 #include "io.h"
 #include "gauss.h"
 
-enum { EXIT, CALCULATE };/* menu items */
-
 void calculate();
 
 int main() 
 { 
     int menu_item;
-    printf("GAUSS v3.1\nCopyright (C) 2018 Khalymain Vladimir\n\n");
+    printf("GAUSSIAN ELIMINATION v3.1\nCopyright (C) 2018 Khalymain Vladimir\n\n");
     while(1) {
     	printf("0 - exit\n1 - calculate\n\nSelect menu item:");
 	scanf("%d", &menu_item);
-	
-        switch(menu_item) {
-            case CALCULATE: calculate(); break;
-            case EXIT: return 0;
-            default: printf("\nNonexistent menu item! Please enter again.\n");
-        }
+
+	if(menu_item != 0 && menu_item != 1)
+		printf("\nNonexistent menu item! Please enter again.\n");
+	else
+		menu_item ? calculate() : exit(0);		
     }  
 }
 
