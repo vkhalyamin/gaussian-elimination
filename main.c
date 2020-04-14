@@ -23,7 +23,7 @@ int main()
 
 void calculate()
 {
-	double** matrix;
+	double **matrix;
 	int i, rank;
 
 	while(!scan_rank(&rank)) {
